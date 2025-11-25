@@ -1,0 +1,140 @@
+[
+  {
+    "type": "business",
+    "id": "business_info",
+    "text": "{\"business_name\": \"Tanya\\u2019s Baking\", \"address\": \"No 69,21st Cross Street, Madambakkam Main Rd, Padmavathy Nagar,Balaji Nagar ,Madampakkam,Chennai,600126.\", \"contact_numbers\": [\"+91-9677276248\"], \"whatsapp\": \"+91-9677276248\", \"working_hours\": \"9:30 AM-9:30 PM\", \"delivery_info\": \"Home delivery available; pickup available. Pre-order required.\", \"mail_to\": \"INFO@TANYASBAKING.COM\"}",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/business/info.json"
+  },
+  {
+    "type": "faq",
+    "id": "faq_0",
+    "text": "What is the easiest way to place an order at Tanya’s Baking? You can place an order by calling or WhatsApping +91-9677276248 during business hours.",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/faq/faq.json"
+  },
+  {
+    "type": "faq",
+    "id": "faq_1",
+    "text": "What are the services offered by Tanya’s Baking? They offer home delivery, take-away and customised cakes as per your requirement.",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/faq/faq.json"
+  },
+  {
+    "type": "faq",
+    "id": "faq_2",
+    "text": "Does Tanya’s Baking offer cake customisation? Yes — customers can customise theme cakes and colours by specifying their requirements.",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/faq/faq.json"
+  },
+  {
+    "type": "faq",
+    "id": "faq_3",
+    "text": "What are the working hours of Tanya’s Baking? Business hours are approximately 9:30 AM to 9:30 PM daily in the Puthur, Chennai location.",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/faq/faq.json"
+  },
+  {
+    "type": "faq",
+    "id": "faq_4",
+    "text": "Does Tanya’s Baking offer gluten-free or special diet options? You should contact the bakery directly to check as dietary options are handled case by case.",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/faq/faq.json"
+  },
+  {
+    "type": "product",
+    "id": "TB-BIRTHDAY-001",
+    "text": "Birthday Cake (Standard) Celebrate love with our exquisite birthday cake, beautifully decorated and perfect for your special moments!",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/products/products.json"
+  },
+  {
+    "type": "product",
+    "id": "TB-THEME-001",
+    "text": "Theme Cake (Kids Cartoon) Delight your little ones with our charming theme cake, customised with their favourite characters and colours!",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/products/products.json"
+  },
+  {
+    "type": "product",
+    "id": "TB-WEDDING-001",
+    "text": "Wedding Cake (Elegant Tier) Celebrate love with our exquisite wedding cake, beautifully decorated and perfect for your special moments!",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/products/products.json"
+  },
+  {
+    "type": "product",
+    "id": "TB-POUND-001",
+    "text": "Pound Cake Enjoy the rich, buttery perfection of our Pound Cake—soft, golden, and irresistibly melt-in-your-mouth!",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/products/products.json"
+  },
+  {
+    "type": "product",
+    "id": "TB-DONUT-001",
+    "text": "Donuts Indulge in our creamy donut, filled with rich cream and topped with a delightful glaze for a perfect treat!",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/products/products.json"
+  },
+  {
+    "type": "product",
+    "id": "TB-BROWNIE-001",
+    "text": "Brownies Celebrate love with our exquisite 1 Tiered theme cake, beautifully decorated and perfect for your special moments!",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/products/products.json"
+  },
+  {
+    "type": "product",
+    "id": "TB-CAKEPOP-001",
+    "text": "Cake Pop Indulge in our cake pop, filled with rich cream and topped with a delightful glaze for a perfect treat!",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/products/products.json"
+  },
+  {
+    "type": "product",
+    "id": "TB-CUPCAKES-001",
+    "text": "Cup Cakes Indulge in our rich chocolate cupcake, topped with velvety frosting for an irresistible sweet treat!",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/products/products.json"
+  },
+  {
+    "type": "product",
+    "id": "TB-SICKLE-001",
+    "text": "Sickle Cake Indulge in our sickle cake, filled with rich cream and topped with a delightful glaze for a perfect treat!",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/products/products.json"
+  },
+  {
+    "type": "instagram",
+    "id": "DQRcEH6ElTQ",
+    "text": "We are happy to share..Actor Arvind Swamy is celebrating men’s day celebration with Tanya’s Baking cake. #cake #theme #baking #bakingclass #chennai",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/instagram/posts.json"
+  },
+  {
+    "type": "instagram",
+    "id": "DOigXADDGfk",
+    "text": "⚽️ FOOTBALL CRAZY ⚽️ A joint cake for two football crazy brothers Size: 6” …",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/instagram/posts.json"
+  },
+  {
+    "type": "instagram",
+    "id": "C-snadRSKL4",
+    "text": "Photo by Tanya's Baking on Aug 15, 2024. #theme #firstbirthday …",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/instagram/posts.json"
+  },
+  {
+    "type": "instagram",
+    "id": "DQRcEH6ElTQ",
+    "text": "Photo by Tanya’s Baking on October 26, 2025. …",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/instagram/posts.json"
+  },
+  {
+    "type": "instagram",
+    "id": "DOp1iMiEjqX",
+    "text": "We are happy to share… Actor Arvind Swamy is celebrating men’s day celebration with Tanya’s Baking cake.",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/instagram/posts.json"
+  },
+  {
+    "type": "instagram",
+    "id": "DQT7hZ-DNa2W",
+    "text": "CHRISTMAS DATES ☃️ Here’s all the important dates you need to know for the festive season at Tanya’s Baking The countdown is officially ON …",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/instagram/posts.json"
+  },
+  {
+    "type": "instagram",
+    "id": "DBBivfUSPvW",
+    "text": "#goattheme #movietheme #cake #chocovanillacake … “Thank you for this wonderful and tasty cake.”",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/instagram/posts.json"
+  },
+  {
+    "type": "instagram",
+    "id": "DOp1SlqkoJg",
+    "text": "15 Sept 2025 — We are happy to share.. Actor Arvind Swamy is celebrating men’s day celebration with Tanya’s Baking cake.",
+    "source": "file:///Users/deepak/Desktop/ideas/tanyas-baking-ai-assistant/data/instagram/posts.json"
+  }
+]

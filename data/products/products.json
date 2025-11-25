@@ -1,0 +1,121 @@
+{
+    "products": [
+        {
+            "product_id": "TB-BIRTHDAY-001",
+            "name": "Birthday Cake (Standard)",
+            "category": "Birthday Cakes",
+            "description": "Celebrate love with our exquisite birthday cake, beautifully decorated and perfect for your special moments!",
+            "price": "Contact for price",
+            "image_urls": [
+                "https://lh3.googleusercontent.com/sitesv/AAzXCkfVkaLPSkOaD5-qe5GoOdB5I2PIYCOUbxUFsWwXzUK8WnTUArD7ofary-V8AULHkzheoP4z__TEubrLF8KmkAOtI7QRuKvG190ZKEtaua5qh81GxDDJ__FoRIoERM_GF3uTqAEJXKYVQ6G2m9wYMfCqw1q95jez5yy34_CVKysMjMS0a1X8GTKCibD2mEpKlRPuWjEqDfTjQsJRvoXRtPVs2LMua2M5AZXXaRs=w1280"
+            ],
+            "source_urls": [
+                "https://www.tanyasbaking.com/our-cakes"
+            ]
+        },
+        {
+            "product_id": "TB-THEME-001",
+            "name": "Theme Cake (Kids Cartoon)",
+            "category": "Theme Cakes",
+            "description": "Delight your little ones with our charming theme cake, customised with their favourite characters and colours!",
+            "price": "Contact for price",
+            "image_urls": [
+                "https://lh3.googleusercontent.com/sitesv/AAzXCkemA2OrGQE9KEjum37fTZeNfDvaskCwIYqcWEuRXiAqS3G6TGyF25Hq1svN_0LSXG4x1ZdxOymgSLoxyrbv835fSXydz-mdh8FdvnDposApqLHF4G0t7kVlpiyXXjN_-ix1eQCNNjsMUwTGFzPGxR4grHp4FYojxJJPEo6TZHfE85LBgZ4HH6T6oQbppD4DemeZhjsFbc2gb5eKQNzTIFijpu9BP_4fHaqfruE=w1280"
+            ],
+            "source_urls": [
+                "https://www.tanyasbaking.com/our-cakes"
+            ]
+        },
+        {
+            "product_id": "TB-WEDDING-001",
+            "name": "Wedding Cake (Elegant Tier)",
+            "category": "Wedding Cakes",
+            "description": "Celebrate love with our exquisite wedding cake, beautifully decorated and perfect for your special moments!",
+            "price": "Contact for price",
+            "image_urls": [
+                "https://lh3.googleusercontent.com/sitesv/AAzXCkdFbJXeTHSjw4-Zo_dXt-RVq_Munp4uDfZVTJKoi15HnPDPUu1HBAVmNGW74NjGtc8GbVuk3RQlpZxFiP0IzOrMLyenHgwp0W6QUq0k3zt3D0QqQgdZQormZclGDqSbsFkeVngY4R9SV6QAAL5beTesdnxseDLLUPHjWfbm1bKlgbmsjhVsy89jNpDzvl382x4OU-bHdz6gbmaVsroiz9jJuIvSz3L_LBBo=w1280"
+            ],
+            "source_urls": [
+                "https://www.tanyasbaking.com/our-cakes"
+            ]
+        },
+        {
+            "product_id": "TB-POUND-001",
+            "name": "Pound Cake",
+            "category": "Pound Cake",
+            "description": "Enjoy the rich, buttery perfection of our Pound Cake—soft, golden, and irresistibly melt-in-your-mouth!",
+            "price": "₹100.00-₹400.00",
+            "image_urls": [
+                "https://lh3.googleusercontent.com/sitesv/AAzXCkfzVVwz-rw0OY-Fd5HQEq8ExMcrci00XNkzqVe_lSu_6rvS1trd_jYkrWGiaDsAIhIKE3H9VAoYsIZr-KtREd0YajrKwMgklNLNU9CTF72DfmjomJCImg2wAczH_eT8V_WZ34TMmDvImM42_30Dg0laBztgfjrw_dbQLlA1IzqnDwTvqXIRzLcAqNcse8yCk5Egy0S7T2LO1dgaGszujaabbpfhSpzBXtPrw-o=w1280"
+            ],
+            "source_urls": [
+                "https://www.tanyasbaking.com/our-cakes"
+            ]
+        },
+        {
+            "product_id": "TB-DONUT-001",
+            "name": "Donuts",
+            "category": "Donuts",
+            "description": "Indulge in our creamy donut, filled with rich cream and topped with a delightful glaze for a perfect treat!",
+            "price": "Contact for price",
+            "image_urls": [
+                "https://lh3.googleusercontent.com/sitesv/AAzXCkcJjso_S1uZOHFlPv46V1lO28NKVLy5bqHeabsMNAwdJyL2JAnl-r0DK0OUrpP3Xwb5iW3RPMxO3pAbRgLuS4VxXQ9f56vakGhJFPGhiZYYUAPmn1g1C1_mz4RqjTvLK8zrE2yMX1a5AWtEbNWdv7ayJtJf5KAqKWb_edTwwK3BbikSBVhS7GRwN1l8d3eKJCJkxmGs9KBzcgpjgKRjxRUt8LpFtJo_3YWT=w1280"
+            ],
+            "source_urls": [
+                "https://www.tanyasbaking.com/our-cakes"
+            ]
+        },
+        {
+            "product_id": "TB-BROWNIE-001",
+            "name": "Brownies",
+            "category": "Brownies",
+            "description": "Celebrate love with our exquisite 1 Tiered theme cake, beautifully decorated and perfect for your special moments!",
+            "price": "Contact for price",
+            "image_urls": [
+                "https://lh3.googleusercontent.com/sitesv/AAzXCkfzVVwz-rw0OY-Fd5HQEq8ExMcrci00XNkzqVe_lSu_6rvS1trd_jYkrWGiaDsAIhIKE3H9VAoYsIZr-KtREd0YajrKwMgklNLNU9CTF72DfmjomJCImg2wAczH_eT8V_WZ34TMmDvImM42_30Dg0laBztgfjrw_dbQLlA1IzqnDwTvqXIRzLcAqNcse8yCk5Egy0S7T2LO1dgaGszujaabbpfhSpzBXtPrw-o=w1280"
+            ],
+            "source_urls": [
+                "https://www.tanyasbaking.com/our-cakes"
+            ]
+        },
+        {
+            "product_id": "TB-CAKEPOP-001",
+            "name": "Cake Pop",
+            "category": "Cake Pop",
+            "description": "Indulge in our cake pop, filled with rich cream and topped with a delightful glaze for a perfect treat!",
+            "price": "Contact for price",
+            "image_urls": [
+                "https://lh3.googleusercontent.com/sitesv/AAzXCkc0rZp2k1tQxPCd1w44w9vqRkekB7OnfX997lER0pH1VW8R-U4l2MtRKmIkG2SuReGCVWiG_yTsk53OR7ZOzGPLS2iRmA0A3JE6kLsFUkcmRKa3Q2ZeFBW3gMARR7pJocTdOCvaSlwcj4Wqs6g5_MIlCUgIzOeqIbC-Cr1AqIpQWjwB9w9eH2gazQlERmzqaHnfvGWpbiFJA7mjmZzmxa1KjNThrkN4NORQ=w1280"
+            ],
+            "source_urls": [
+                "https://www.tanyasbaking.com/our-cakes"
+            ]
+        },
+        {
+            "product_id": "TB-CUPCAKES-001",
+            "name": "Cup Cakes",
+            "category": "Cup Cakes",
+            "description": "Indulge in our rich chocolate cupcake, topped with velvety frosting for an irresistible sweet treat!",
+            "price": "Contact for price",
+            "image_urls": [
+                "https://lh3.googleusercontent.com/sitesv/AAzXCkfosKlWLtqiMOS4DShgrIiF1fQ6-iAjlKX2djPHH4R5cUzvM5YLIidqwjj-rOoLUcrul3-2TYXs8P5TV2q6obo4yk9QjpxhGUlZYL6NufDeWSoxQeeGWQIeN5Jb3LP5eRIo32bVZdT_qetPg3WAsRv2u5xger-3Q2tp8dpXBzLYa6Y_cuhPRUxJAOtrZPa9stqAOSVDvZ6c19b7ks8pf-AKnRKPkKH8WeYjWD0=w1280"
+            ],
+            "source_urls": [
+                "https://www.tanyasbaking.com/our-cakes"
+            ]
+        },
+        {
+            "product_id": "TB-SICKLE-001",
+            "name": "Sickle Cake",
+            "category": "Sickle Cake",
+            "description": "Indulge in our sickle cake, filled with rich cream and topped with a delightful glaze for a perfect treat!",
+            "price": "Contact for price",
+            "image_urls": [
+                "https://lh3.googleusercontent.com/sitesv/AAzXCkfjJ49_OUyUzT-ChyJ6IEzMCzS1fbP7t5Y7CQh_m9i_JbFC1HPqR3UHrCBmlXjM4h-ceeWLGq3x4ysH29wHBBnpj8jNikLge65txgIeEganf-ooaas68pWLap5vw--IpVKoqXiYS5bP23FlhG8t9jfVUx9LvTPzxG6vj7a2F_EH556WhMsDXOwcnnW2OW5BHF2Qblj1myughLem0lTQvZSUcofEw9N53PGCmdQ=w1280"
+            ],
+            "source_urls": [
+                "https://www.tanyasbaking.com/our-cakes"
+            ]
+        }
+    ]
+}
