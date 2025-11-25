@@ -1,222 +1,242 @@
-# 🧁 Tanya’s Baking — AI Assistant (Hybrid RAG + Web Search + Google Reviews)
+# 🧁 Tanya’s Baking — AI Assistant  
+### Hybrid RAG + Web Search + Google Reviews + FastAPI Backend + Widget-Ready Architecture
 
 This project is an **AI-powered assistant** built specifically for **Tanya’s Baking (Chennai)**.
+
 It combines:
 
-* **Local structured data** (products, FAQs, business info)
-* **Hybrid-RAG retrieval**
-* **Intent-based routing**
-* **Verified web search for baking knowledge**
-* **Google Maps API for real Google ratings & reviews**
-* **Tamil, English, & Tanglish support**
-* **Model fallback (OpenAI → OpenRouter)**
-* **Domain safety rules**
+- **Local structured data** (products, FAQs, business info)
+- **Hybrid-RAG retrieval**
+- **Intent-based routing**
+- **Verified baking web search**
+- **Google Maps API for top 3 real reviews**
+- **Domain safety filters to avoid other bakeries**
+- **Tamil, English & Tanglish support**
+- **FastAPI backend**
+- **Widget-ready API to embed on any website**
+- **Modular architecture (microservice-friendly)**
 
-This ensures the AI stays **accurate, safe, and domain-specific**.
+This ensures the AI is **accurate, safe, and fully tuned to Tanya’s Baking**.
 
 ---
 
 # 📁 Project Structure
 
 ```
-tanyas-baking-ai-assistant
+tanyas-baking-ai-assistant/
 │
-├── README.md
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── chat.py                 # /ask endpoint
+│   │   │   ├── admin.py                # admin routes (future)
+│   │   │   ├── analytics.py            # usage logs (future)
+│   │   │   └── models/
+│   │   │       └── chat_models.py      # Request/Response models
+│   │   │
+│   │   ├── core/
+│   │   │   └── config.py               # env loader + settings
+│   │   │
+│   │   ├── services/
+│   │   │   ├── llm_engine.py           # main Hybrid AI engine
+│   │   │   ├── retrieve.py             # local RAG retriever
+│   │   │   ├── router.py               # intent: tanya/baking/hybrid
+│   │   │   ├── web_search.py           # Serper search
+│   │   │   ├── ingest.py               # build ingested_docs.json
+│   │   │   ├── google_reviews.py       # verified Google reviews
+│   │   │   └── prompt_template.txt     # LLM prompt template
+│   │   │
+│   │   ├── data/
+│   │   │   ├── business/info.json
+│   │   │   ├── products/products.json
+│   │   │   ├── faq/faq.json
+│   │   │   ├── instagram/posts.json
+│   │   │   ├── reviews/google_reviews.json (optional)
+│   │   │   └── ingested_docs.json
+│   │   │
+│   │   └── main.py                     # FastAPI bootstrap
+│   │
+│   └── requirements.txt
+│
 ├── docs/
-│   └── canonical_schema.md        # Your master data schema
+│   ├── canonical_schema.md             # data model
+│   └── WHITELIST.md                    # allowed domain rules
 │
-├── data/
-│   ├── business/
-│   │   └── info.json              # Address, phone, hours, delivery info
-│   ├── products/
-│   │   └── products.json          # 10 product categories with images
-│   ├── faq/
-│   │   └── faq.json               # Manually curated FAQ
-│   ├── instagram/
-│   │   └── posts.json             # Scraped Instagram captions + images
-│   ├── reviews/
-│   │   └── google_reviews.json    # Fetched (Top 3) Google reviews
-│   └── ingested_docs.json         # Final flattened RAG docs
-│
-├── src/
-│   ├── ingest.py                  # Converts JSON → RAG chunk documents
-│   ├── retrieve.py                # Custom keyword + scoring retrieval
-│   ├── router.py                  # Intent classifier (tanya | baking | hybrid)
-│   ├── web_search.py              # Serper search with Tanya whitelist filter
-│   ├── google_reviews.py          # Fetches top 3 Google reviews for Tanya
-│   ├── chat.py                    # The main hybrid agent
-│   └── prompt_template.txt        # LLM prompt template
-│
-└── .env                           # API keys (OpenAI, Serper, Google, OpenRouter)
+└── README.md
 ```
 
 ---
 
 # 🚀 Features Completed
 
-## ✅ 1. Canonical Data Model
+## ✅ 1. Canonical Data Schema
+Defines how all baking business data should be structured:
+- Products
+- Instagram posts
+- Business details
+- FAQ
+- Ratings & reviews
 
-A clean schema defining:
-
-* Product structure
-* Business info
-* Instagram posts
-* FAQ
-* Reviews
-
-Stored in `docs/canonical_schema.md`.
+Stored in: `docs/canonical_schema.md`.
 
 ---
 
-## ✅ 2. Local JSON Knowledge Base
+## ✅ 2. JSON Knowledge Base
+Manually curated + scraped data:
 
-You created:
-
-* `info.json` (address, phone, hours, delivery options)
-* `products.json` (10 categories + 10 images)
-* `faq.json` (core Q&A about Tanya’s Baking)
-* `posts.json` (Instagram scraped test set)
+- `info.json` → address, hours, phone, delivery  
+- `faq.json` → curated FAQ  
+- `products.json` → 10 categories + prices + images  
+- `posts.json` → Instagram captions/images  
+- `google_reviews.json` (optional offline copy)  
 
 ---
 
-## ✅ 3. RAG Pipeline
+## ✅ 3. RAG Pipeline (Local Retrieval)
+`ingest.py` converts JSON → small search-friendly chunks.  
+`retrieve.py` retrieves top-K matching chunks from:
 
-`ingest.py` flattens JSON into small searchable text chunks.
-
-`retrieve.py` performs:
-
-* Token-based scoring
-* Ranking
-* Top-K retrieval
-
-Used automatically by the bot.
+```
+data/ingested_docs.json
+```
 
 ---
 
 ## ✅ 4. Intent Router
+`router.py` decides:
 
-`router.py` classifies every question as:
-
-* **tanya** → Use Tanya-only knowledge
-* **baking** → General baking + internet
-* **hybrid** → Allow both
-
-Examples:
-
-| User Query                        | Intent |
-| --------------------------------- | ------ |
-| “What is Tanya’s address?”        | tanya  |
-| “How to make buttercream?”        | baking |
-| “Does Tanya make eggless cakes?”  | hybrid |
-| “Teach me how to decorate a cake” | baking |
-| “Reviews about Tanya”             | tanya  |
+| Intent | Meaning |
+|--------|---------|
+| **tanya** | data must be verified Tanya-specific + local data |
+| **baking** | general baking recipes, tips, techniques |
+| **hybrid** | mix both (ex: “eggless cake Tanya makes?”) |
 
 ---
 
-## ✅ 5. Real-Time Baking Knowledge (Web Search)
+## ✅ 5. Verified Web Search (Baking Only)
+`web_search.py` uses Serper API to fetch:
 
-`web_search.py` uses **Serper API** to fetch:
+- Recipes  
+- Techniques  
+- Baking tutorials  
+- Ingredients  
+- Methods  
 
-* Recipes
-* Techniques
-* Ingredients
-* Explanations
-
-Results are filtered and cleaned before passing to the LLM.
+Filtered & ranked before sending to the LLM.
 
 ---
 
 ## ✅ 6. Verified Google Reviews (Top 3)
-
 `google_reviews.py` fetches:
 
-* Business name
-* Google rating
-* Total reviews
-* Top 3 customer reviews
-* Verified source (Google Maps Place ID)
-
-This ensures **no contamination** from other bakeries with similar names.
+- Google rating  
+- Total number of reviews  
+- Top 3 verified reviews  
+- Verified via **place_id**  
+- Prevents contamination from other bakeries with the same name
 
 ---
 
-## ✅ 7. Domain Safety Rules
+## ✅ 7. Domain-Safety Rules ✔
+The assistant **never mixes** other bakeries with similar names:
 
-The assistant NEVER hallucinates other bakery data.
-
-Safety layers:
-
-* Verified PLACE_ID for Tanya
-* Tanya web queries only return results from whitelisted URLs
-* All other results are dropped
-* If uncertain: respond safely (“not sure”)
+- Uses Tanya-specific **place_id**
+- Only accepts verified URLs
+- Filters out irrelevant search results
+- If unsure → safely replies “Not sure”
 
 ---
 
-## ✅ 8. Hybrid Prompt Building
-
-`chat.py` merges:
+## ✅ 8. Hybrid LLM Engine
+`llm_engine.py` merges:
 
 ```
 LOCAL RAG CONTEXT
-+
-VERIFIED GOOGLE REVIEWS (if requested)
-+
-WEB SEARCH RESULTS (baking mode only)
++ VERIFIED GOOGLE REVIEWS
++ WEB SEARCH RESULTS
++ INTENT ROUTING
 ```
 
-Then sends the combined context to:
+Then calls:
 
-### Primary model
+### Primary  
+✔ `OpenAI gpt-4o-mini` (Tamil + English best)
 
-`OpenAI gpt-4o-mini (fast + best Tamil + English)`
-
-### Fallback model
-
-`meta-llama/3.1-8b-instruct (OpenRouter)`
+### Fallback  
+✔ `meta-llama/3.1-8b-instruct` (OpenRouter)
 
 ---
 
-## ✅ 9. Full Multi-Language Support
+## ✅ 9. REST API (FastAPI)
+### Chat endpoint
+```
+POST /api/chat/ask
+```
 
-Tamil, English & Tanglish automatically detected.
+Payload:
+```json
+{
+  "question": "How to make buttercream?",
+  "session_id": "user-123"
+}
+```
+
+Response:
+```json
+{
+  "answer": "...",
+  "local_sources": [...],
+  "web_sources_verified": [...],
+  "web_sources_unverified": [...],
+  "intent": "baking"
+}
+```
 
 ---
 
-# 🔥 Example Interaction (Working)
+# 🎈 Future Roadmap
 
-### Query:
+## 🟢 **1. Frontend Chat Widget (Floating Bubble)**
+Embed anywhere — React, plain HTML, WordPress, Shopify.
 
-```
-Tanya's google review and rating
-```
+Features:
+- Floating icon
+- Chat popup
+- Typing indicator
+- Theme customization
+- Powered by `/chat/ask`
 
-### Output:
+## 🟢 **2. Admin Dashboard (Next.js + FastAPI)**
+See:
+- Conversations
+- Top queries
+- User sessions
+- Errors
+- Web search usage
+- Analytics graphs
+- Custom FAQ editor
+- Product editor
+- Upload training data
 
-```
-Tanya's Baking has 5★ based on 166 reviews.
-Top 3 reviews:
-1. “Amazing taste…”
-2. “Delivered on time…”
-3. “My kids loved the custom cake…”
+## 🟢 **3. Conversation Storage (PostgreSQL/MongoDB)**
 
-Sources:
-- Google Maps (verified Place ID)
-```
+## 🟢 **4. Webhook for WhatsApp**
 
-### Query:
+## 🟢 **5. Multi-business Generic Version**
+Turn this into **“AI Assistant for Local Businesses Blueprint”** where any store can:
 
-```
-How to make Swiss meringue buttercream?
-```
-
-→ Uses baking internet search + mix of top-rated recipe sites.
+- Upload products  
+- Upload images  
+- Upload FAQ  
+- Configure brand  
+- Embed widget  
+- Launch bot in 5 minutes  
 
 ---
 
 # ⚙️ Environment Variables
 
-Create a `.env`:
+Create `.env` in `backend/`:
 
 ```
 OPENAI_API_KEY=sk-...
@@ -227,10 +247,20 @@ GOOGLE_API_KEY=...
 
 ---
 
-# 🧪 Run the assistant
+# ▶️ Running the Backend
 
 ```
-python3 src/chat.py
+cd backend
+uvicorn app.main:app --reload
 ```
 
 ---
+
+# 🧪 Test Chatbot (Command Line Version)
+
+```
+python3 backend/app/services/llm_engine.py
+```
+
+---
+
